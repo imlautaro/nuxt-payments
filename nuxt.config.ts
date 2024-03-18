@@ -3,4 +3,11 @@ export default defineNuxtConfig({
 		preference: 'light',
 	},
 	modules: ['@nuxt/ui'],
+	runtimeConfig: {
+		stripeSecretKey: '',
+		stripeWebhookSecret: '',
+		public: {
+			baseURL: '',
+		},
+	},
 })
