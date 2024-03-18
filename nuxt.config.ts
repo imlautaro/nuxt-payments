@@ -6,8 +6,11 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		stripeSecretKey: '',
 		stripeWebhookSecret: '',
+		paypalClientSecret: '',
+		paypalWebhookId: '',
 		public: {
 			baseURL: '',
+			paypalClientId: '',
 		},
 	},
 })
