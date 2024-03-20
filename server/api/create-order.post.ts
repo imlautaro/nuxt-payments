@@ -1,3 +1,5 @@
+import { Preference } from 'mercadopago'
+
 export default defineEventHandler(async event => {
 	const runtimeConfig = useRuntimeConfig()
 	const body = await readBody(event)
@@ -55,6 +57,30 @@ export default defineEventHandler(async event => {
 			})
 
 			return { url: order.links[1].href }
+		case 'mercadopago':
+			const dollar = await criptoya.dollar()
+			const preference = new Preference(mercadopago)
+
+			const response = await preference.create({
+				body: {
+					auto_return: 'approved',
+					back_urls: {
+						success: `${runtimeConfig.public.baseURL}/thank-you`,
+					},
+					items: [
+						{
+							id: body.product_name
+								.toLowerCase()
+								.replace(' ', '_'),
+							quantity: 1,
+							title: body.product_name,
+							unit_price: body.price * dollar.blue.ask,
+						},
+					],
+				},
+			})
+
+			return { url: response.sandbox_init_point }
 		default:
 			setResponseStatus(event, 400)
 			return { error: 'Invalid payment platform' }

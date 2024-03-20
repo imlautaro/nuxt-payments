@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const pending = ref(false)
 
-const paymentMethods = ['stripe', 'paypal']
+const paymentMethods = ['stripe', 'paypal', 'mercadopago']
 const paymentMethod = ref('paypal')
 
 const pay = async () => {

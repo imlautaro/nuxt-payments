@@ -19,6 +19,12 @@ devDependencies:
   '@nuxt/ui':
     specifier: ^2.14.2
     version: 2.14.2(nuxt@3.10.3)(vite@5.1.6)(vue@3.4.21)
+  criptoya:
+    specifier: ^1.0.0
+    version: 1.0.0
+  mercadopago:
+    specifier: ^2.0.8
+    version: 2.0.8
   ofetch:
     specifier: ^1.3.3
     version: 1.3.3
@@ -2686,6 +2692,12 @@ packages:
   /create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
 
+  /criptoya@1.0.0:
+    resolution: {integrity: sha512-A7o/q5Yx1bACaScSTojA90I0mKYW/wHjM5K1Iw4IwW+Rwaf86PSh0rS8Yp0VLZ2jZX+vmD/E36zc8vwPOfozww==}
+    dependencies:
+      ofetch: 1.3.3
+    dev: true
+
   /croner@8.0.1:
     resolution: {integrity: sha512-Hq1+lXVgjJjcS/U+uk6+yVmtxami0r0b+xVtlGyABgdz110l/kOnHWvlSI7nVzrTl8GCdZHwZS4pbBFT7hSL/g==}
     engines: {node: '>=18.0'}
@@ -4101,6 +4113,15 @@ packages:
   /media-typer@0.3.0:
     resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==}
     engines: {node: '>= 0.6'}
+    dev: true
+
+  /mercadopago@2.0.8:
+    resolution: {integrity: sha512-8ZfXRPyJ/Z6NYTZmqjF706pG0fezO6kjaIHJxaWgs9cB0zEC/G+5B/S1JRUUeJALEIXLkCAxjwb6hzRETsOb1w==}
+    dependencies:
+      node-fetch: 2.7.0
+      uuid: 9.0.1
+    transitivePeerDependencies:
+      - encoding
     dev: true
 
   /merge-stream@2.0.0:
@@ -6292,6 +6313,11 @@ packages:
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  /uuid@9.0.1:
+    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
+    hasBin: true
+    dev: true
 
   /validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}

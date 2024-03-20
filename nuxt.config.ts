@@ -8,9 +8,12 @@ export default defineNuxtConfig({
 		stripeWebhookSecret: '',
 		paypalClientSecret: '',
 		paypalWebhookId: '',
+		mercadopagoWebhookSecret: '',
+		mercadopagoAccessToken: '',
 		public: {
 			baseURL: '',
 			paypalClientId: '',
+			mercadopagoKey: '',
 		},
 	},
 })
